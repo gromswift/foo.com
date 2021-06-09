@@ -47,7 +47,7 @@ function Slider() {
         className={styles.slide}
         style={checkElemPos(activeSlide, index, arr)}
       >
-        <img src={`/assets/images/slides/${currSlide}.jpg`} alt=""/>
+        <img src={currSlide} alt=""/>
       </div>
     ));
   }
