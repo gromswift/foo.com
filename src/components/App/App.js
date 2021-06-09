@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 
+import styles from './App.module.scss';
 import SECTIONS from 'constants/siteSections';
 
 import Header from 'components/common/Header/Header';
@@ -40,7 +41,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className={styles.container}>
       <div ref={refs[SECTIONS.home]}>
         <Header
           scrollTo={scrollTo}
