@@ -1,0 +1,95 @@
+@import "src/styles/animations";
+@import "src/styles/variables";
+
+.mainWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  z-index: 100;
+}
+
+.menuContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  background-color: $color-primary;
+  animation-name: moveToRight;
+  animation-duration: 0.2s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  padding: 100px 10px 20px;
+
+  nav {
+    margin-bottom: 10px;
+
+    li {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.lang {
+  cursor: pointer;
+  white-space: nowrap;
+  margin-bottom: 15px;
+
+  svg {
+    margin-left: 2px;
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: $color-secondary;
+  white-space: nowrap;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  box-shadow: rgba(25, 45, 51, 0.45) 0 5px 5px;
+  cursor: pointer;
+  padding: 15px 16px;
+  margin-bottom: 40px;
+
+  &:hover {
+    svg {
+      transform: translateX(10px);
+    }
+  }
+
+  svg {
+    transition: all 0.2s ease-in-out;
+    margin-left: 8px;
+
+    path {
+      fill: $color-secondary;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .mainWrap {
+    display: none;
+  }
+}
+
+

@@ -1,0 +1,182 @@
+@import "src/styles/variables";
+
+.header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  min-width: 320px;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  background-color: #fff;
+  box-shadow: rgba(49, 69, 132, 0.1) 0 10px 10px -10px;
+  padding: 0 20px;
+  z-index: 200;
+
+  &Mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
+
+.logo {
+  width: 76px;
+  height: 32px;
+  cursor: pointer;
+
+  g path:only-of-type {
+    fill: $color-secondary;
+  }
+}
+
+.mobileMenu {
+  cursor: pointer;
+
+  div {
+    width: 40px;
+    height: 2px;
+    background-color: $color-primary;
+    transition: all 0.3s ease-in-out;
+
+    &:first-of-type {
+      transform-origin: top left;
+    }
+
+    &:last-of-type {
+      transform-origin: bottom left;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &Active {
+    div:first-of-type {
+      transform: translate(4px, 4px) rotate(45deg);
+    }
+
+    div:nth-child(even) {
+      transform: translate(-4px, 3px) rotate(135deg);
+      opacity: 0;
+    }
+
+    div:last-of-type {
+      transform: translate(4px, 0px) rotate(-45deg);
+    }
+  }
+}
+
+.desktopMenu {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1168px;
+  padding: 0 20px;
+}
+
+.rightSide {
+  display: flex;
+  align-items: center;
+}
+
+.lang {
+  cursor: pointer;
+  white-space: nowrap;
+  margin-right: 15px;
+
+  svg {
+    margin-left: 2px;
+
+    path {
+      fill: $color-primary;
+    }
+  }
+}
+
+.contactBtn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: $color-secondary;
+  white-space: nowrap;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(25, 45, 51, 0.15) 0 5px 5px;
+  cursor: pointer;
+  padding: 15px 16px;
+
+  &:hover {
+    svg {
+      transform: translateX(10px);
+    }
+  }
+
+  svg {
+    transition: all 0.2s ease-in-out;
+    margin-left: 8px;
+
+    path {
+      fill: $color-secondary;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .header {
+    position: absolute;
+    box-shadow: none;
+    padding-top: 75px;
+
+    &Mobile {
+      position: absolute;
+    }
+  }
+
+  .mobileMenu {
+    display: none;
+  }
+
+  .desktopMenu {
+    display: flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  .ridgepole {
+    flex-shrink: 10;
+    width: 100%;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .lang {
+    margin-right: 30px;
+  }
+
+  .contactBtn {
+    font-size: 18px;
+    padding: 19px 22px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .lang {
+    margin-right: 45px;
+  }
+
+  .contactBtn {
+    font-size: 18px;
+    padding: 19px 33px;
+  }
+}
+
+

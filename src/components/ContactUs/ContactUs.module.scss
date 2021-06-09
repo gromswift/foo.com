@@ -1,0 +1,144 @@
+@import "src/styles/variables";
+
+.contentContainer {
+  max-width: 1168px;
+  padding: 30px 20px 60px;
+  margin: 0 auto;
+}
+
+.titleMinor {
+  color: $color-secondary;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+  color: inherit;
+  background-color: #f4fafe;
+  border: none;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+textarea.input {
+  resize: none;
+  height: 120px;
+  margin-bottom: 30px;
+}
+
+.submitBtn {
+  display: block;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #fff;
+  background-color: $color-secondary;
+  border: none;
+  border-radius: 25px;
+  box-shadow: rgba($color-secondary, 0.15) 0 5px 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  padding: 13px 18px;
+  margin: 0 auto;
+
+  &:hover {
+    background-color: rgba($color-secondary, 0.85);
+  }
+}
+
+@media (min-width: 481px) {
+  .contentContainer {
+    padding-top: 70px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  textarea.input {
+    margin-bottom: 35px;
+  }
+
+  .submitBtn {
+    font-size: 18px;
+    padding: 13px 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  .contentContainer {
+    padding-top: 110px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  input.input {
+    display: inline-block;
+    width: calc(50% - 17px);
+
+    &:not(:last-of-type) {
+      margin-right: 34px;
+    }
+  }
+
+  textarea.input {
+    margin-bottom: 45px;
+  }
+
+  .submitBtn {
+    padding: 15px 30px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .contentContainer {
+    padding-top: 150px;
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 45px;
+  }
+
+  textarea.input {
+    margin-bottom: 55px;
+  }
+
+  .submitBtn {
+    padding: 17px 37px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .contentContainer {
+    padding-top: 190px;
+  }
+
+  textarea.input {
+    margin-bottom: 65px;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+}

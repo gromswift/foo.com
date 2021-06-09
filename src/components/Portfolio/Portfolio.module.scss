@@ -1,0 +1,138 @@
+@import "src/styles/variables";
+
+.contentContainer {
+  max-width: 1168px;
+  padding: 0 20px 65px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 45px;
+}
+
+.projects {
+  text-align: center;
+}
+
+.projectsList {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.project {
+  width: 100%;
+  height: 212px;
+  min-width: 280px;
+  max-width: 320px;
+  background-color: #c3d0d8;
+  margin-bottom: 32px;
+}
+
+.seeMore {
+  display: block;
+  overflow: hidden;
+  width: max-content;
+  color: $color-secondary;
+  text-decoration: none;
+  margin: 0 auto;
+
+  &:hover {
+    .seeMoreUnderline {
+      transform: translateX(0%);
+    }
+  }
+
+  &Underline {
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-bottom: 2px solid;
+    transform: translateX(-110%);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+
+@media (min-width: 481px) {
+  .contentContainer {
+    padding-top: 28px;
+    padding-bottom: 75px;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 55px;
+  }
+
+  .projectsList {
+    max-width: 370px;
+  }
+
+  .project {
+    max-width: 370px;
+    height: 236px;
+  }
+}
+
+@media (min-width: 769px) {
+  .contentContainer {
+    padding-top: 56px;
+    padding-bottom: 85px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 65px;
+  }
+
+  .projectsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .project {
+    width: calc(50% - 16px);
+    height: 280px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .contentContainer {
+    padding-top: 84px;
+    padding-bottom: 95px;
+
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 75px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .contentContainer {
+    padding-top: 115px;
+    padding-bottom: 105px;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 85px;
+  }
+
+  .project {
+    width: calc(33.3% - 20px);
+    margin-right: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
