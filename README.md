@@ -1,3 +1,11 @@
+# Aims of the task
+Make adaptive mobile first application with given psd mockup (only desktop version was provided).
+
+- Make mobile menu.
+- Make image on the Intro section as slider. (I decided to make an infinite slider)
+- Animations, any other features optional.
+- Host the app on gitpages.
+
 # Getting Started with Create React Social
 
 This project was bootstrapped with [Create React Social](https://github.com/facebook/create-react-app).
